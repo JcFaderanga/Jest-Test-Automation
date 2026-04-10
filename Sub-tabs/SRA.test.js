@@ -103,7 +103,7 @@ const validateTokens = () => {
     expect(userTokens.size).toBe(expectedRoles.length);
     expect(actualRoles).toEqual(expect.arrayContaining(expectedRoles));
 
-    console.log('🔑 User Tokens:', Object.fromEntries(userTokens));
+    console.log('User Tokens:', Object.fromEntries(userTokens));
 };
 
 /**

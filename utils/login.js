@@ -13,7 +13,7 @@ const Credentials = {
 
 const AuthTokens = new Map();
 
-// 🔐 Login single user
+// Login single user
 const loginUser = async (role) => {
   const res = await API_LOGIN.post('/cognitomiddlewares/user/login', {
     email: Credentials[role],
@@ -26,7 +26,7 @@ const loginUser = async (role) => {
 // 🔐 Login all users (same logic as your loop but FIXED)
 const loginAllUsers = async () => {
   for (const role of Object.keys(Credentials)) {
-    const token = await loginUser(role); // ✅ important
+    const token = await loginUser(role); 
     AuthTokens.set(role, token);
   }
 };
